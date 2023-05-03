@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Navber = () => {
     return (
         <div>
-            <Navbar style={{backgroundColor:"#0000005e"}} collapseOnSelect expand="lg" fixed="top" variant="">
+            <Navbar style={{backgroundColor:"#0000009e"}} collapseOnSelect expand="lg" fixed="top" variant="">
                 <Container>
                     <img style={{ width: "70px", height: "50px" }} src={logo}></img>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />

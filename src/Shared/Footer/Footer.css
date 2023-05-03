@@ -7,10 +7,6 @@ a{
     display: inline-block;
 }
 #footer{
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
     padding: 10px 0 0;
     background-image: linear-gradient(to right top, #00245b, #006faf, #008793, #009b5d, rgb(51, 146, 0));
 }
