@@ -62,13 +62,13 @@ const Footer = () => {
                                         <h6 className='text-white'>Tel No: 92387576</h6>
                                     </li>
                                     <li>
-                                        <h6 className='text-white'>Email: <a href="">tea@jalebi.com</a></h6>
+                                        <h6 className='text-white'>Email: <a href="">fresh@food.com</a></h6>
                                     </li>
                                     <li>
-                                        <h6 className='text-white'>Website: <a href="">www.jalebi-food.com</a></h6>
+                                        <h6 className='text-white'>Website: <a href="">www.freshfood.com</a></h6>
                                     </li>
                                     <li>
-                                        <h6 className='text-white'>Social:</h6>
+                                        <h6 className='text-white '>Social:</h6>
                                         <div className="foot-logo-icon pt-3 ">
                                             <i><FaFacebookF></FaFacebookF></i>
                                             <i><FaYoutube></FaYoutube></i>

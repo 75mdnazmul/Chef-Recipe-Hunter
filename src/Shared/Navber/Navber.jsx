@@ -6,6 +6,9 @@ import profile from "../../assets/profile.webp"
 import { Link } from 'react-router-dom';
 
 const Navber = () => {
+
+    
+    
     return (
         <div>
             <Navbar style={{backgroundColor:"#0000009e"}} collapseOnSelect expand="lg" fixed="top" className='p-0'>
