@@ -3,9 +3,10 @@ import {
   } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../Pages/Home/Home";
-import Login from "../Shared/Login/Login";
-import Registration from "../Shared/Registration/Registration";
+import Login from "../Pages/Login/Login";
+import Registration from "../Pages/Registration/Registration";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import ChefDetails from "../Pages/ChefDetails/ChefDetails";
 
   const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ import ErrorPage from "../ErrorPage/ErrorPage";
         {
           path: "register",
           element: <Registration></Registration>
+        },
+        {
+          path: "chef_Details",
+          element: <ChefDetails></ChefDetails>
         }    
       ],
     },

@@ -9,9 +9,7 @@ const Login = () => {
     const [error, setError] = useState("")
     const [success, setSuccess] = useState("")
 
-    const { logIn } = useContext(AuthContext)
-    const { loginWithGoogle } = useContext(AuthContext)
-    const { loginWithGithub } = useContext(AuthContext)
+    const { logIn, loginWithGoogle, loginWithGithub } = useContext(AuthContext)
 
     const handleLogin = event => {
         event.preventDefault();

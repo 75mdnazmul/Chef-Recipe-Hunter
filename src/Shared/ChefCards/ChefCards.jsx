@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ChefCards = () => {
     const [chefAllDatas, setChefAllData] = useState([])
@@ -24,9 +25,9 @@ const ChefCards = () => {
                                     <Card.Text>
                                         <p className='fw-bold'>Years Of Experience : {chefAllData.years_of_experience}</p>
                                         <p className='fw-bold'>Numbers of recipes : {chefAllData.recipe_number}</p>
-                                        <p className='fw-bold'>Likes :{chefAllData.likes_number}</p>
+                                        <p className='fw-bold'>Likes : {chefAllData.likes_number}</p>
                                     </Card.Text>
-                                    <Button variant="primary">View Recipes  </Button>
+                                    <Link to="/chef_Details"><Button style= {{background:"#008906", border:'none'}}>View Recipes  </Button></Link>
                                 </Card.Body>
                             </Card>
                         </div>

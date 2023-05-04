@@ -9,10 +9,7 @@ const Registration = () => {
     const [error, setError] = useState("")
     const [success, setSuccess] = useState("")
 
-    const {createUser} = useContext(AuthContext);
-    const { loginWithGoogle } = useContext(AuthContext)
-    const { loginWithGithub } = useContext(AuthContext)
-
+    const {createUser, loginWithGoogle, loginWithGithub} = useContext(AuthContext);
 
     const handleRegister = event =>{
         event.preventDefault();
