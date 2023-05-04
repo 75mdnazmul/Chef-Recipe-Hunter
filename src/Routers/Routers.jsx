@@ -9,6 +9,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import ChefDetails from "../Pages/ChefDetails/ChefDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import Error from "../Pages/Error/Error";
+import Blog from "../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path : "errorpage",
         element: <Error></Error>
+      },
+      {
+        path: "blog",
+        element: <Blog></Blog>
       }
     ],
   },

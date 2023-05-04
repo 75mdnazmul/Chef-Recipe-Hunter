@@ -91,7 +91,7 @@ const Registration = () => {
                     </div>
                     <p className='text-danger text-center fw-bold'>{error}</p>
                     <p className='text-success text-center fw-bold'>{success}</p>
-                    <button type="submit" className="btn btn-primary form-control">Submit</button>
+                    <button style={{background:"#00a90b"}} className='form-control text-white rounded-2 py-2 px-3 fw-bold'>Submit</button>
                     <div className='d-flex justify-content-center align-items-center pt-2'>
                         <p>--------------- </p><h4 className='pb-2'>&ensp; or &ensp;</h4><p> ---------------</p>
                     </div>

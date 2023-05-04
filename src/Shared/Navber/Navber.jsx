@@ -18,8 +18,7 @@ const Navber = () => {
 
     return (
         <div>
-
-            <Navbar style={{backgroundColor:"#0000009e"}} collapseOnSelect expand="lg" fixed="top" className='p-0'>
+            <Navbar style={{backgroundColor:"#0000009e"}} collapseOnSelect expand="lg" fixed="top" className='p-0 '>
                 <Container>
                     <img style={{ width: "70px", height: "50px" }} src={logo}></img>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
