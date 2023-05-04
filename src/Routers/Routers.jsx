@@ -5,12 +5,13 @@ import Main from "../layout/Main";
 import Home from "../Pages/Home/Home";
 import Login from "../Shared/Login/Login";
 import Registration from "../Shared/Registration/Registration";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
-      // errorElement: <ErrorPage />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
@@ -23,8 +24,7 @@ import Registration from "../Shared/Registration/Registration";
         {
           path: "register",
           element: <Registration></Registration>
-        }
-        
+        }    
       ],
     },
   ]);

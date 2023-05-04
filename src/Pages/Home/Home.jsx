@@ -1,13 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-// import Banner from '../../Shared/Banner/Banner';
-import ChefCard from '../../Shared/ChefCard/ChefCard';
+import Banner from '../../Shared/Banner/Banner';
 
 const Home = () => {
     return (
         <div>
-            {/* <Banner></Banner> */}
-            <ChefCard></ChefCard>
+            <Banner></Banner>
         </div>
     );
 };

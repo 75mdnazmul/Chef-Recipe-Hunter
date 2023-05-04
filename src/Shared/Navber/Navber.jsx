@@ -1,16 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { Container, Dropdown, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../assets/logo.jpg'
 import profile from "../../assets/profile.webp"
 import { Link } from 'react-router-dom';
 
 const Navber = () => {
 
-    
-    
     return (
         <div>
+
             <Navbar style={{backgroundColor:"#0000009e"}} collapseOnSelect expand="lg" fixed="top" className='p-0'>
                 <Container>
                     <img style={{ width: "70px", height: "50px" }} src={logo}></img>
