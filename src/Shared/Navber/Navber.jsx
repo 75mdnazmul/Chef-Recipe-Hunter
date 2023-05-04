@@ -1,11 +1,20 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../assets/logo.jpg'
 import profile from "../../assets/profile.webp"
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProviders';
 
 const Navber = () => {
+
+    const {user, logOut} = useContext(AuthContext);
+
+    const handleSignOut = () =>{
+        logOut()
+        .then(()=>{})
+        .catch(error => console.error(error))
+    }
 
     return (
         <div>
@@ -21,8 +30,17 @@ const Navber = () => {
                             <Link className='text-decoration-none text-white fw-bold px-3' to="/login">Login</Link>
                         </Nav>
                         <Nav>
-                            <img style={{ width: "40px" }} title='' className='rounded-circle mx-2 border border-2 border-white' src={profile} alt="Profile photo"></img>
-                            <Link to="/login"><button style={{background:"#00a90b"}} className=' text-white rounded-2 py-1 px-3 fw-bold'>Login</button></Link>
+                            {
+                                user ? 
+                                <>
+                                <img style={{ width: "40px" }} title={user.email} className='rounded-circle mx-2 border border-2 border-white' src={profile} alt="Profile photo"></img> 
+                                <button onClick={handleSignOut} style={{background:"#00a90b"}} className=' text-white rounded-2 py-1 px-3 fw-bold'>Sign Out</button>
+                                </>
+                                : 
+                                <>
+                                <Link to="/login"><button style={{background:"#00a90b"}} className=' text-white rounded-2 py-1 px-3 fw-bold'>Login</button></Link>
+                                </>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

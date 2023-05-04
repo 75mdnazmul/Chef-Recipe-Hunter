@@ -23,11 +23,11 @@ const ChefCards = () => {
                                 <Card.Body>
                                     <Card.Title className='fw-bold text-center pb-2 fs-4'>{chefAllData.chef_name}</Card.Title>
                                     <Card.Text>
-                                        <p className='fw-bold'>Years Of Experience : {chefAllData.years_of_experience}</p>
-                                        <p className='fw-bold'>Numbers of recipes : {chefAllData.recipe_number}</p>
-                                        <p className='fw-bold'>Likes : {chefAllData.likes_number}</p>
+                                        <span className='fw-bold'>Years Of Experience : {chefAllData.years_of_experience}</span><br/>
+                                        <span className='fw-bold'>Numbers of recipes : {chefAllData.recipe_number}</span><br/>
+                                        <span className='fw-bold'>Likes : {chefAllData.likes_number}</span>
                                     </Card.Text>
-                                    <Link to="/chef_Details"><Button style= {{background:"#008906", border:'none'}}>View Recipes  </Button></Link>
+                                    <Link to="/chef_Details"><Button style={{ background: "#008906", border: 'none' }}>View Recipes  </Button></Link>
                                 </Card.Body>
                             </Card>
                         </div>

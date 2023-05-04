@@ -12,6 +12,7 @@ const githubProvider = new GithubAuthProvider()
 
 const AuthProviders = ({children}) => {
     const [user, serUser] = useState(null)
+    const [loading, setLoading] = useState(true)
     
     const createUser = (email, password ) => {
         return createUserWithEmailAndPassword(auth, email, password)
@@ -32,6 +33,7 @@ const AuthProviders = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth, currentUser =>{
             console.log(currentUser);
             serUser(currentUser)
+            setLoading(false)
         })
         return () =>{
             unsubscribe();
@@ -41,6 +43,7 @@ const AuthProviders = ({children}) => {
     const authInfo ={
         user,
         createUser,
+        loading,
         logIn,
         logOut,
         loginWithGoogle,
