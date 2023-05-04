@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import ChefDetails from "../Pages/ChefDetails/ChefDetails";
+import PrivateRoutes from "./PrivateRoutes";
 
   const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ import ChefDetails from "../Pages/ChefDetails/ChefDetails";
         },
         {
           path: "chef_Details",
-          element: <ChefDetails></ChefDetails>
+          element: <PrivateRoutes><ChefDetails></ChefDetails></PrivateRoutes>
         }    
       ],
     },
