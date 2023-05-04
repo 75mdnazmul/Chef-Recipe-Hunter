@@ -22,17 +22,8 @@ const Navber = () => {
                             <Link className='text-decoration-none text-white fw-bold px-3' to="/login">Login</Link>
                         </Nav>
                         <Nav>
-                            <Dropdown>
-                                <Dropdown.Toggle id="dropdown-button-dark-example1" variant="">
-                                    <img style={{ width: "40px" }} className='rounded-circle' src={profile} alt=""></img>
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu variant="dark">
-                                    <Dropdown.Item href="#/action-1" active>
-                                        Log Out
-                                    </Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
+                            <img style={{ width: "40px" }} title='' className='rounded-circle mx-2 border border-2 border-white' src={profile} alt="Profile photo"></img>
+                            <Link to="/login"><button style={{background:"#00a90b"}} className=' text-white rounded-2 py-1 px-3 fw-bold'>Login</button></Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

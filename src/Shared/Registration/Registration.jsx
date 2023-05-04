@@ -1,16 +1,23 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import loginImage from "../../assets/register.webp"
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProviders';
 
 const Registration = () => {
+    const [error, setError] = useState("")
+    const [success, setSuccess] = useState("")
 
     const {createUser} = useContext(AuthContext);
+    const { loginWithGoogle } = useContext(AuthContext)
+    const { loginWithGithub } = useContext(AuthContext)
+
 
     const handleRegister = event =>{
         event.preventDefault();
+        setSuccess("")
+        setError("")
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
@@ -18,14 +25,42 @@ const Registration = () => {
         const photo = form.photo.value
         console.log(name, password, email, photo);
 
+        if(password.length < 6){
+            setError('Password not vaild need 6 cheracters')
+            return;
+        }
+
         createUser(email, password)
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
             form.reset();
+            setSuccess("Registration is successfully completed")
         })
         .catch(error => {
-            console.log(error);
+            setError(error.message);
+        })
+    }
+    const handleGoogleSignUp = () => {
+        loginWithGoogle()
+            .then(result => {
+                const loggedGoogle = result.user
+                console.log(loggedGoogle);
+                setSuccess("Google Registration is successfully completed")
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+    }
+    const handleGithubSignIn = () =>{
+        loginWithGithub()
+        .then(result => {
+            const loggedGithub = result.user
+            console.log(loggedGithub);
+            setSuccess("Github Registration is successfully completed")
+        })
+        .catch(error => {
+            setError(error.message)
         })
     }
     return (
@@ -53,15 +88,17 @@ const Registration = () => {
                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                         <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                     </div>
+                    <p className='text-danger text-center fw-bold'>{error}</p>
+                    <p className='text-success text-center fw-bold'>{success}</p>
                     <button type="submit" className="btn btn-primary form-control">Submit</button>
                     <div className='d-flex justify-content-center align-items-center pt-2'>
                         <p>--------------- </p><h4 className='pb-2'>&ensp; or &ensp;</h4><p> ---------------</p>
                     </div>
                     <div className='text-center'>
-                        <span className='px-3 fs-2'><FaGoogle></FaGoogle></span>
-                        <span className='px-3 fs-2'><FaGithub></FaGithub></span>
+                        <button onClick={handleGoogleSignUp} className='p-3 fs-2 bg-white border-0'><FaGoogle></FaGoogle></button>
+                        <button onClick={handleGithubSignIn} className='p-3 fs-2 bg-white border-0'><FaGithub></FaGithub></button>
                     </div>
-                    <p className='text-center pt-3 mb-0 '>Already have an account ? <Link to="/login" className='text-decoration-underline'>Login Now</Link></p>
+                    <p className='text-center pt-3 mb-0 '>Already have an account ? <Link to="/login" className='text-decoration-underline fw-bold'>Login Now</Link></p>
                 </form>
                 <img className='col-sm-12 col-lg-6' src={loginImage}></img>
             </div>
