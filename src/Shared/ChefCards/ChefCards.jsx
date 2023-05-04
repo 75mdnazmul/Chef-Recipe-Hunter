@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import ChefDetails from '../../Pages/ChefDetails/ChefDetails';
 
 const ChefCards = () => {
     const [chefAllDatas, setChefAllData] = useState([])
@@ -9,8 +10,10 @@ const ChefCards = () => {
         fetch('http://localhost:7000/chefAllData')
             .then(res => res.json())
             .then(data => setChefAllData(data))
-    }, [])
-    // console.log(chefAllDatas);
+        }, [])
+        const handleViewRecipes = (id)=>{
+            <ChefDetails id={id}></ChefDetails>
+        }
     return (
         <div className='container pb-5'>
             <div className='row'>
@@ -27,7 +30,7 @@ const ChefCards = () => {
                                         <span className='fw-bold'>Numbers of recipes : {chefAllData.recipe_number}</span><br/>
                                         <span className='fw-bold'>Likes : {chefAllData.likes_number}</span>
                                     </Card.Text>
-                                    <Link to="/chef_Details"><Button style={{ background: "#008906", border: 'none' }}>View Recipes  </Button></Link>
+                                    <Link to="/chef_Details"><Button onClick={()=> handleViewRecipes(chefAllData.id)} style={{ background: "#008906", border: 'none' }}> View Recipes </Button></Link>
                                 </Card.Body>
                             </Card>
                         </div>
@@ -36,6 +39,7 @@ const ChefCards = () => {
             </div>
         </div>
     );
+    
 };
 
 export default ChefCards;

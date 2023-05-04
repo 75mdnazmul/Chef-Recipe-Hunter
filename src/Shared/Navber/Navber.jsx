@@ -27,7 +27,7 @@ const Navber = () => {
                         <Nav className="mx-auto">
                             <Link className='text-decoration-none text-white fw-bold px-3' to="/">Home</Link>
                             <Link className='text-decoration-none text-white fw-bold px-3' to="/blog">Blog</Link>
-                            <Link className='text-decoration-none text-white fw-bold px-3' to="/login">Login</Link>
+                            <Link className='text-decoration-none text-white fw-bold px-3' to="/errorpage">ErrorPage</Link>
                         </Nav>
                         <Nav>
                             {

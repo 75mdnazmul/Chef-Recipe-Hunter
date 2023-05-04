@@ -2,12 +2,13 @@
 import React, { useContext, useState } from 'react';
 import loginImage from "../../assets/login.webp"
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProviders';
 
 const Login = () => {
     const [error, setError] = useState("")
     const [success, setSuccess] = useState("")
+    const navigate = useNavigate();
 
     const { logIn, loginWithGoogle, loginWithGithub } = useContext(AuthContext)
 
@@ -30,6 +31,7 @@ const Login = () => {
                 const loggedUser = result.user
                 console.log(loggedUser);
                 form.reset()
+                navigate("/")
                 setSuccess("Login is successfully completed")
             })
             .catch(error => {
@@ -42,6 +44,7 @@ const Login = () => {
             .then(result => {
                 const loggedGoogle = result.user
                 console.log(loggedGoogle);
+                navigate("/")
                 setSuccess("Google Login is successfully completed")
             })
             .catch(error => {
@@ -53,6 +56,7 @@ const Login = () => {
         .then(result => {
             const loggedGithub = result.user
             console.log(loggedGithub);
+            navigate("/")
             setSuccess("Github Login is successfully completed")
         })
         .catch(error => {

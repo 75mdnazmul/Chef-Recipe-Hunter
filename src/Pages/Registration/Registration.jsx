@@ -2,13 +2,14 @@
 import React, { useContext, useState } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import loginImage from "../../assets/register.webp"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProviders';
 
 const Registration = () => {
     const [error, setError] = useState("")
     const [success, setSuccess] = useState("")
-
+    const  navigate = useNavigate()
+    
     const {createUser, loginWithGoogle, loginWithGithub} = useContext(AuthContext);
 
     const handleRegister = event =>{
@@ -32,6 +33,7 @@ const Registration = () => {
             const loggedUser = result.user;
             console.log(loggedUser);
             form.reset();
+            navigate("/")
             setSuccess("Registration is successfully completed")
         })
         .catch(error => {
@@ -43,6 +45,7 @@ const Registration = () => {
             .then(result => {
                 const loggedGoogle = result.user
                 console.log(loggedGoogle);
+                navigate("/")
                 setSuccess("Google Registration is successfully completed")
             })
             .catch(error => {
@@ -54,6 +57,7 @@ const Registration = () => {
         .then(result => {
             const loggedGithub = result.user
             console.log(loggedGithub);
+            navigate("/")
             setSuccess("Github Registration is successfully completed")
         })
         .catch(error => {
