@@ -20,6 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader:()=> fetch('https://server-75mdnazmul.vercel.app/chefAllData')
       },
       {
         path: "login",
@@ -30,8 +31,9 @@ const router = createBrowserRouter([
         element: <Registration></Registration>
       },
       {
-        path: "chef_Details",
-        element: <PrivateRoutes><ChefDetails></ChefDetails></PrivateRoutes>
+        path: "/chefAllData/:id",
+        element: <PrivateRoutes><ChefDetails></ChefDetails></PrivateRoutes>,
+        loader: ({params}) => fetch(`https://server-75mdnazmul.vercel.app/chefAllData/${params.id}`)
       },
       {
         path : "errorpage",

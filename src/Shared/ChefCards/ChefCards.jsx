@@ -7,13 +7,10 @@ import ChefDetails from '../../Pages/ChefDetails/ChefDetails';
 const ChefCards = () => {
     const [chefAllDatas, setChefAllData] = useState([])
     useEffect(() => {
-        fetch('http://localhost:7000/chefAllData')
+        fetch('https://server-75mdnazmul.vercel.app/chefAllData')
             .then(res => res.json())
             .then(data => setChefAllData(data))
         }, [])
-        const handleViewRecipes = (id)=>{
-            <ChefDetails id={id}></ChefDetails>
-        }
     return (
         <div className='container pb-5'>
             <div className='row'>
@@ -30,7 +27,7 @@ const ChefCards = () => {
                                         <span className='fw-bold'>Numbers of recipes : {chefAllData.recipe_number}</span><br/>
                                         <span className='fw-bold'>Likes : {chefAllData.likes_number}</span>
                                     </Card.Text>
-                                    <Link to="/chef_Details"><Button onClick={()=> handleViewRecipes(chefAllData.id)} style={{ background: "#008906", border: 'none' }}> View Recipes </Button></Link>
+                                    <Link to={`/chefAllData/${chefAllData.id}`}><Button style={{ background: "#008906", border: 'none' }}> View Recipes </Button></Link>
                                 </Card.Body>
                             </Card>
                         </div>

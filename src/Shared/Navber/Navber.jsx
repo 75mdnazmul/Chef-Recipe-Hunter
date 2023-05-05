@@ -3,12 +3,11 @@ import React, { useContext } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../assets/logo.jpg'
 import profile from "../../assets/profile.webp"
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProviders';
 import ActiveLink from '../../Routers/ActiveLink/ActiveLink';
 
 const Navber = () => {
-
     const {user, logOut} = useContext(AuthContext);
 
     const handleSignOut = () =>{
@@ -21,7 +20,7 @@ const Navber = () => {
         <div>
             <Navbar style={{backgroundColor:"#0000009e"}} collapseOnSelect expand="lg" fixed="top" className='p-0 '>
                 <Container>
-                    <img style={{ width: "70px", height: "50px" }} src={logo}></img>
+                    <Link to="/"><img style={{ width: "70px", height: "50px" }} src={logo}></img></Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">

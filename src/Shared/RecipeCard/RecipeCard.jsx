@@ -5,7 +5,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 const RecipeCard = () => {
     const [chefAllDatas, setChefAllData] = useState([])
     useEffect(() => {
-        fetch('http://localhost:7000/chefAllData')
+        fetch('https://server-75mdnazmul.vercel.app/chefAllData')
             .then(res => res.json())
             .then(data => setChefAllData(data))
     }, [])

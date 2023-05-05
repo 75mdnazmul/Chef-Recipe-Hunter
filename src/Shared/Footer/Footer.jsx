@@ -82,7 +82,7 @@ const Footer = () => {
                 </div>
                 <section id="Copyright">
                     <p className="copyright">
-                        Copyright &#169; 2023 Fast Food. All rights reserved
+                        Copyright &#169; 2023 Fresh Food. All rights reserved
                     </p>
                 </section>
             </footer>
