@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import ChefDetails from '../../Pages/ChefDetails/ChefDetails';
 
 const ChefCards = () => {
     const [chefAllDatas, setChefAllData] = useState([])
