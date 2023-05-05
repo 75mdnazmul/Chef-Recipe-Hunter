@@ -1,0 +1,19 @@
+.active{
+    background: #00a90b;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.active:hover{
+    background: #00ce0e;
+    color: white;
+}
+.noActive{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+.noActive:hover{
+    color:#00fb11
+}

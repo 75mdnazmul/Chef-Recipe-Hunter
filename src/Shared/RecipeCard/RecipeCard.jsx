@@ -9,7 +9,6 @@ const RecipeCard = () => {
             .then(res => res.json())
             .then(data => setChefAllData(data))
     }, [])
-    console.log(chefAllDatas);
     return (
         <Container >
             <h2 className='fw-bold text-center pb-5'>More Recipes</h2>
@@ -22,7 +21,7 @@ const RecipeCard = () => {
                                     chefAllData.recipes.map(recipe =>
                                         <div key={recipe.name}>
                                             <Card className='mb-4'>
-                                                <Card.Img variant="top" src={recipe.image}/>
+                                                <Card.Img style={{height:"200px"}} variant="top" src={recipe.image}/>
                                                 <Card.Body>
                                                     <Card.Title >{recipe.name}</Card.Title>
                                                     <Card.Text>Views :&nbsp; 

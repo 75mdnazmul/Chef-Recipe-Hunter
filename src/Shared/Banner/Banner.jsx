@@ -21,7 +21,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption className='align-middle text-white'>
-                        <h1 style={{fontSize: "42px",}}>Food Gives Energy</h1>
+                        <h1 style={{fontSize: "46px", paddingBottom:"40px"}}>Welcome to Afghan Chefs Food</h1>
+                        <h4 style={{fontSize: "26px",}}>Food Gives Energy</h4>
                         <p style={{marginBottom:"150px"}}> The average adult needs around 2000 calories a day. Food groups such as carbohydrates and fats are broken down by the body to produce energy.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -33,7 +34,8 @@ const Banner = () => {
                         alt="Second slide"
                     />
                     <Carousel.Caption className='align-middle text-white'>
-                        <h1 style={{fontSize: "42px",}}>Maintaining Body Weight</h1>
+                    <h1 style={{fontSize: "46px", paddingBottom:"40px"}}>Welcome to Afghan Chefs Food</h1>
+                        <h4 style={{fontSize: "26px",}}>Maintaining Body Weight</h4>
                         <p style={{marginBottom:"150px"}}>A balanced diet is needed to maintain a healthy and functioning body, and it is crucial to maintain a balanced body-height-weight ratio.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -45,7 +47,8 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption className='align-middle text-white'>
-                        <h1 style={{fontSize: "42px",}}>Builds Bones and Muscles</h1>
+                    <h1 style={{fontSize: "46px", paddingBottom:"40px"}}>Welcome to Afghan Chefs Food</h1>
+                        <h4 style={{fontSize: "26px",}}>Builds Bones and Muscles</h4>
                         <p style={{marginBottom:"150px"}}> In adults, proteins and calcium help strengthen bones and balances muscles density.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -57,7 +60,8 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption className='align-middle text-white'>
-                        <h1 style={{fontSize: "42px",}}>Builds Immunity</h1>
+                    <h1 style={{fontSize: "46px", paddingBottom:"40px"}}>Welcome to Afghan Chefs Food</h1>
+                        <h4 style={{fontSize: "26px",}}>Builds Immunity</h4>
                         <p style={{marginBottom:"150px"}}>Vitamin C and other nutrients are necessary to defend the body against the attack of diseases.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -69,7 +73,8 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption className='align-middle text-white'>
-                        <h1 style={{fontSize: "42px",}}>Provide energy, nutrients</h1>
+                        <h1 style={{fontSize: "46px", paddingBottom:"40px"}}>Welcome to Afghan Chefs Food</h1>
+                        <h4 style={{fontSize: "26px",}}>Provide energy, nutrients</h4>
                         <p style={{marginBottom:"150px"}}>Food is not just fuel for our bodies; it is also a source of pleasure and a way to connect with others. By choosing nutritious and delicious foods, we can nourish our bodies and enjoy the experience of eating.</p>
                     </Carousel.Caption>
                 </Carousel.Item>

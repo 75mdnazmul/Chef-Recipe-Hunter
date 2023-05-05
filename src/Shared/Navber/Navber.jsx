@@ -5,6 +5,7 @@ import logo from '../../assets/logo.jpg'
 import profile from "../../assets/profile.webp"
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProviders';
+import ActiveLink from '../../Routers/ActiveLink/ActiveLink';
 
 const Navber = () => {
 
@@ -24,9 +25,9 @@ const Navber = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
-                            <Link className='text-decoration-none text-white fw-bold px-3' to="/">Home</Link>
-                            <Link className='text-decoration-none text-white fw-bold px-3' to="/blog">Blog</Link>
-                            <Link className='text-decoration-none text-white fw-bold px-3' to="/errorpage">ErrorPage</Link>
+                            <ActiveLink to="/"><span className="p-4">Home</span></ActiveLink>
+                            <ActiveLink to="/blog"><span className="p-4">Blog</span></ActiveLink>
+                            <ActiveLink to="/errorpage"><span className="p-4">ErrorPage</span></ActiveLink>
                         </Nav>
                         <Nav>
                             {
