@@ -19,7 +19,7 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, password, email);
+        // console.log(name, password, email);
 
         if (password.length < 6) {
             setError('Password not vaild need 6 cheracters')

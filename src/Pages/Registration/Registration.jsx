@@ -12,7 +12,7 @@ const Registration = () => {
     
     const {createUser, loginWithGoogle, loginWithGithub} = useContext(AuthContext);
 
-    const handleRegister = event =>{
+    const handleRegister = event => {
         event.preventDefault();
         setSuccess("")
         setError("")
@@ -21,17 +21,11 @@ const Registration = () => {
         const email = form.email.value;
         const password = form.password.value;
         const photo = form.photo.value
-        console.log(name, password, email, photo);
 
-        if(password.length < 6){
-            setError('Password not vaild need 6 cheracters')
-            return;
-        }
-
-        createUser(email, password)
+        createUser(email, password, name, photo)
         .then(result => {
             const loggedUser = result.user;
-            console.log(loggedUser);
+            // console.log(loggedUser);
             form.reset();
             navigate("/")
             setSuccess("Registration is successfully completed")
@@ -39,11 +33,12 @@ const Registration = () => {
         .catch(error => {
             setError(error.message);
         })
+
     }
     const handleGoogleSignUp = () => {
         loginWithGoogle()
             .then(result => {
-                const loggedGoogle = result.user
+                const loggedGoogle = result.user;
                 console.log(loggedGoogle);
                 navigate("/")
                 setSuccess("Google Registration is successfully completed")
